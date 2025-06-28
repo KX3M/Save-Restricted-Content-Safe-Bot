@@ -20,7 +20,17 @@ async def chk_user(message, user_id):
     if user_id in user or user_id in OWNER_ID:
         return 0
     else:
-        await message.reply_text("Purchase premium to do the tasks...")
+        keyboard = InlineKeyboardMarkup([
+            [InlineKeyboardButton("Cʟɪᴄᴋ Hᴇʀᴇ ᴛᴏ Sᴇᴇ Pʟᴀɴs", url="https://graph.org/ContentSaverXrobot-06-23")],
+            [InlineKeyboardButton("ʟᴇᴇᴄʜ ɢʀᴏᴜᴘ ", url="https://t.me/Pythonbotz"),
+             InlineKeyboardButton("ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ", url="https://t.me/metaui")]
+        ])
+        
+        await message.reply_text(
+            "<b>Hᴇʏ Bʀᴏ/Sɪs ,\n\n<blockquote>Yᴏᴜ Dᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴʏ Pʀᴇᴍɪᴜᴍ Pʟᴀɴs !! </blockquote>\n\nIғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ʀᴇsᴛʀɪᴄᴛᴇᴅ Cᴏɴᴛᴇɴᴛ ғᴏʀᴍ ᴀɴʏ Bᴏᴛ / Cʜᴀɴɴᴇʟ / Gʀᴏᴜᴘ !! ᴛʜᴇɴ ᴘᴜʀᴄʜᴀsᴇ Oᴜʀ Pʀᴇᴍɪᴜᴍ Pʟᴀɴ ᴀᴛ ᴀғғᴏʀᴅᴀʙʟᴇ ᴘʀɪᴄᴇ ᴛᴏ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ !!\n\n<i>Pᴏᴡᴇʀᴇᴅ ʙʏ <a href=https://t.me/Pythonbotz>Python Botz</a></i></b>",
+            reply_markup=keyboard,
+            disable_web_page_preview=True
+        )
         return 1
 
 
